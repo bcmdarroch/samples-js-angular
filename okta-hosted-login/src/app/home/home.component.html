@@ -4,16 +4,23 @@
   <p>This example shows you how to use the
     <a href="https://github.com/okta/okta-oidc-js/tree/master/packages/okta-angular">Okta Angular Library</a> to add the
     <a href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">PKCE Flow</a> to your application.</p>
-  <p>When you click the login button below, you will be redirected to the login page on your Okta org. After you authenticate,
-    you will be returned to this application with an ID Token and Access Token. These tokens will be stored in local storage
+  <p>When you click the login button below, you will be redirected to the login page on your Okta org. After you
+    authenticate,
+    you will be returned to this application with an ID Token and Access Token. These tokens will be stored in local
+    storage
     and can be retrieved at a later time.</p>
   <button id="login-button" class="ui primary button" role="button" (click)="login()">Login</button>
 </div>
 
 <div *ngIf="isAuthenticated && userName">
   <p>Welcome back, {{ userName }}!</p>
+
+  <img width="300"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Emoji_u1f64b.svg/480px-Emoji_u1f64b.svg.png">
+
   <p>
-    You have successfully authenticated against your Okta org, and have been redirected back to this application.  You now have an ID Token and access token in local storage.
+    You have successfully authenticated against your Okta org, and have been redirected back to this application. You
+    now have an ID Token and access token in local storage.
     Visit the <a href="/profile">My Profile</a> page to take a look inside the ID Token.
   </p>
   <h3>Next Steps</h3>
@@ -28,5 +35,6 @@
   <ul>
     <li *ngFor="let example of resourceServerExamples"><a href="{{example.url}}">{{example.label}}</a></li>
   </ul>
-  <p>Once you have downloaded and started the example resource server, you can visit the <a href="/messages">My Messages</a> page to see the authentication process in action.</p>
+  <p>Once you have downloaded and started the example resource server, you can visit the <a href="/messages">My
+      Messages</a> page to see the authentication process in action.</p>
 </div>
